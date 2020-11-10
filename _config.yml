@@ -24,15 +24,12 @@ logo: "/assets/images/logo-200.png"
 description: >- # this means to ignore newlines until "baseurl:"
   
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://help.inciteful.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: just-the-docs
-plugins:
-  - jekyll-feed
-
+# plugins:
+  
 search_enabled: true
 
 search:
@@ -59,31 +56,31 @@ search:
   # Supports true or false (default)
   button: false
 
-aux_links:
-  "Inciteful Docs on GitHub":
-    - "//github.com/weishuhn/inciteful-docs"
+# aux_links:
+#   "Inciteful Docs on GitHub":
+#     - "//github.com/weishuhn/inciteful-docs"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
 
 heading_anchors: true
 
-footer_content: "Copyright &copy; 2020 Michael Weishuhn."
+footer_content: "Copyright &copy; 2020 Inciteful.xyz"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
-# Footer "Edit this page on GitHub" link text
-gh_edit_link: true # show or hide edit this page link
-gh_edit_link_text: "Edit this page on GitHub."
-gh_edit_repository: "https://github.com/weishuhn/inciteful-docs" # the github URL for your repo
-gh_edit_branch: "master" # the branch that your docs is served from
-# gh_edit_source: docs # the source that your files originate from
-gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+# # Footer "Edit this page on GitHub" link text
+# gh_edit_link: true # show or hide edit this page link
+# gh_edit_link_text: "Edit this page on GitHub."
+# gh_edit_repository: "https://github.com/weishuhn/inciteful-docs" # the github URL for your repo
+# gh_edit_branch: "master" # the branch that your docs is served from
+# # gh_edit_source: docs # the source that your files originate from
+# gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
-ga_tracking: G-MGD4NYYYGQ
-ga_tracking_anonymize_ip: true 
+# ga_tracking: G-MGD4NYYYGQ
+# ga_tracking_anonymize_ip: true 
       
 # Exclude from processing.
 # The following items will not be processed, by default.

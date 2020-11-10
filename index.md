@@ -5,14 +5,12 @@ nav_order: 1
 ---
 
 # What is Inciteful?
-Inciteful is a new take on the process of searching through academic literature and, as such, can be a bit confusing at first.  The hope is that after a quick tour through these pages you'll get the hang of it quickly. 
-
-The site was built from the ground up to be flexible.  That means whether you are just skimming or a power user, you should be able to accomplish what you need. 
+Inciteful is a new take on the process of searching through academic literature and, as such, can be a bit confusing at first.  The hope is that after a few minutes with these pages you'll quickly get the hang of it. 
 
 ## Getting Started
-The documentation is broken up into pieces based on what you are trying to accomplish.  
+The site was built from the ground up to be flexible.  That means whether you are just skimming or are a power user, you should be able to accomplish what you need. 
 
-* Go straight to the [Quick Start](#quick-start) section below if you are the type who just wants to dive right in and figure it out as you go.
+* Go straight to the [Quick Start](quick-start) section if you are the type who just wants to dive right in and figure it out as you go.
 
 * The [Use Cases](use-cases) section goes into different ways of using Inciteful.
 
@@ -20,19 +18,13 @@ The documentation is broken up into pieces based on what you are trying to accom
 
 * The [Power Users](power-users) section goes in depth on how to get exactly the info you want out of the graph using the SQL query interface.  
 
+## Why Inciteful?
+The vast majority of academic search engines focus on "importance" (as measured by number of citations) and keyword matching to retrieve their results. They typically show you stats about who the papers cite and who cites those papers. But there is value and information in the underlying structure that citations provide and it is almost always ignored. Inciteful flips that on it's head by making citations the center of it's search process by:
 
-## Quick Start
-There are a variety of ways to use Inciteful, which you can view on on the [use cases](use-cases) page but here we will just go through a simple search process. 
+* Building a citation network centered around the paper(s) of your choice
+* Analyzing that network to surface the most interesting data
 
-### 1) Start with a Paper
-The easiest way to get started is by having a paper that covers a topic in which you are interested.  
+Each network, and the data within, is unique to your search based on the papers you gave it so you can be sure to get the most relevant results possible. With Inciteful's unique approach you are presented not only with the most "important" papers in the graph, but also the most similar. This similarity measurement is from a class of algorithms called "link prediction" algorithms. 
 
-### 2) Explore the Dashboard
+Link prediction algorithms are used most commonly in social networks to suggest people with whom you should be friends. The same concept is applied here but for citations i.e. who we think you might want to cite. This approach tends to surface more recent literature and helps you zero in on the state of the art more quickly than if you were just looking for the top cited papers.  If you are interested in learning more, head over to our [How Does Inciteful Work?](how-does-it-work) and [Graphs Explained](graphs-explained) sections. 
 
-### 3) Add Relevant Papers
-
-### 4) Create the Next Graph
-
-### 5) Repeat Steps 3 and 4
-
-### 6) Download the Results

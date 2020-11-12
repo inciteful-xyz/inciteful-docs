@@ -85,12 +85,16 @@ We've stopped with [this graph](https://inciteful.xyz/p?dois[]=10.1006%2Faama.20
 Next we can jump down to the `Other Data` section to see who is publishing, where they work, and where they are publishing.
 
 It's easy to see the top authors:
+
 ![](assets/images/top-authors.png)
 
+
 Where they work:
+
 ![](assets/images/top-inst.png)
 
 And where they are publishing:
+
 ![](assets/images/top-journals.png)
 
 ## 7) Download Your Papers

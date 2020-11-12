@@ -3,13 +3,51 @@ layout: default
 title: Power Users
 nav_order: 60
 ---
+If you really want to get to know all the functionality of Inciteful, you've found the right place.
 
+- [Graph Filters](#graph-filters)
+  - [Graph Keyword Filters](#graph-keyword-filters)
+  - [Distance Filters](#distance-filters)
+- [BibTeX](#bibtex)
+  - [Importing into Inciteful](#importing-into-inciteful)
+    - [Mendeley: Exporting Citations to a BibTex file](#mendeley-exporting-citations-to-a-bibtex-file)
+    - [Zotero: Exporting Citations to a BibTex file](#zotero-exporting-citations-to-a-bibtex-file)
+  - [Exporting from Inciteful](#exporting-from-inciteful)
+- [SQL Query Panel](#sql-query-panel)
+  - [Database Schema](#database-schema)
+    - [`papers`](#papers)
+    - [`authors`](#authors)
+    - [`title_search('SEARCH_TERM')`](#title_searchsearch_term)
+    - [`title_terms`](#title_terms)
 
 # Graph Filters
 
 ## Graph Keyword Filters 
 
 ## Distance Filters
+
+
+# BibTeX
+Inciteful supports both [BibTeX](faq#what-is-a-bibtex-file) importing as well as exporting. The import functionality is used to seed a graph and the export functionality is used to save papers that are of interest to you. 
+
+## Importing into Inciteful
+Instead of manually building up your network, you can use the import functionality to seed a network with papers in which you are already interested.  In order to do so, go to the home page and under the main search box there is an `Import BibTeX` link.  Click on that to use your BibTeX file as the basis for your search.  
+
+**Note:** Inciteful will only recognize BibTeX entries with a [DOI](faq#what-is-a-doi) associated with them. So please be sure that your references have the appropriate DOIs.  If using Zotero, you can use the [Locate](https://www.zotero.org/support/locate) functionality to expedite this process. 
+
+### Mendeley: Exporting Citations to a BibTex file
+1. Select the references you wish to export to BibTex in Mendeley
+2. Under the `File` menu item click `Export`
+3. Then choose file type `BibTex (*.bib)`, save your BibTex file with a `.bib` extension
+
+### Zotero: Exporting Citations to a BibTex file
+1. Under the `My Library` menu on the left, right click on the folder you wish to export.
+2. In the context menu click `Export Collection`
+3. Then choose the `BibTex` format and click `OK`
+4. Save your BibTex file with a `.bib` extension
+
+## Exporting from Inciteful
+At the bottom of every table which has a DOI in the data, there will be an export button (![](assets/images/bibtex-button.png)) which you can use to export the contents of the table in a BibTeX format. 
 
 # SQL Query Panel
 

@@ -7,7 +7,7 @@ nav_order: 50
 In order to understand how Inciteful works, you should have a base line level of knowledge about graphs.  If you don't, read [Graphs Explained](graphs-explained.md) first and then come back here. 
 
 - [Academic Papers as Graphs](#academic-papers-as-graphs)
-  - [Directed Acyclic Graphs (DAGs)](#directed-acyclic-graphs-dags)
+  - [As a Directed Acyclic Graph (DAG)](#as-a-directed-acyclic-graph-dag)
 - [Local Graphs](#local-graphs)
   - [Starting with a Paper](#starting-with-a-paper)
   - [Making Your Own Graph](#making-your-own-graph)
@@ -27,15 +27,13 @@ One way to think about the body of academic literature is as one big graph with 
 
 But before we dive into the [algorithms](#algorithms) we use, let's think a talk a bit more about specifically what type of graph the academic literature forms.  
 
-## Directed Acyclic Graphs (DAGs)
+## As a Directed Acyclic Graph (DAG)
 If you think about how academic literature evolves the underlying structure of the graph becomes apparent and it has implications for what types of algorithms we can use as well as the real world meaning of the results.  The two most important factors are:
 
 * Citations are a one way relation.  `Paper A` citing `Paper B` does not mean that `Paper B` also cites `Paper A`.  As a result, the graph is what we call "[directed](graphs-explained#directed-vs-undirected)".
 * Academic literature is inherently subject to time, i.e. papers can only cite what has already been published.  As a result, there is no way for loops to form in the graph. 
 
-These two points, happen to satisfy the requirements for calling the academic graph a **directed acyclic graph** or (DAG).
-
-Understanding this, helps us to understand how to interpret the results and implications of our later analysis. 
+These two points, happen to satisfy the requirements for calling the academic graph a **directed acyclic graph** or (DAG) <sub>[[wikipedia]](https://en.wikipedia.org/wiki/Directed_acyclic_graph)</sub>.  Understanding this, helps us to understand how to interpret the results and implications of our later analysis. 
 
 # Local Graphs
 The 

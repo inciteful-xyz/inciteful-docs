@@ -54,7 +54,7 @@ And in the `Similar Papers` table:
 Now that we have a list of papers that are relevant to what we are looking for, we want to start making a new graph centered around these papers.  In order to do so, we want to click the <img src="assets/images/plus-sign.png" style="width: 15px"/> next to each title.  This will start collecting papers to add to the graph.  Typically it is best to add at least five papers which cover your specific topic.  Also, be sure to use the paging at the bottom of each table.
 
 ## 4) Create the Next Graph
-As you add papers a button will pop up to the right of the screen: 
+As you add papers a button will pop up on the bottom-right of the screen: 
 
 ![Button](assets/images/add-papers-button.png)
 

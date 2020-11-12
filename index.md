@@ -28,3 +28,4 @@ Each network, and the data within, is unique to your search based on the papers 
 
 Link prediction algorithms are used most commonly in social networks to suggest people with whom you should be friends. The same concept is applied here but for citations i.e. who we think you might want to cite. This approach tends to surface more recent literature and helps you zero in on the state of the art more quickly than if you were just looking for the top cited papers.  If you are interested in learning more, head over to our [How Does Inciteful Work?](how-does-it-work) and [Graphs Explained](graphs-explained) sections. 
 
+Otherwise jump into the [Quick Start](quick-start) section to dive right in. 

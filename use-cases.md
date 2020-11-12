@@ -3,7 +3,7 @@ layout: default
 title: Use Cases
 nav_order: 30
 ---
-Inciteful can be used in a variety of ways depending on what you are trying to accomplish. 
+Inciteful can be used in a variety of ways depending on what you are trying to accomplish as outlined below.  But if you're new, I recommend everyone run through the [Quick Start](quick-start) section first to get a superficial familiarity with the site. 
 
 - [Getting Familiar With a Body of Literature](#getting-familiar-with-a-body-of-literature)
 - [Finding Literature for a Paper in Progress](#finding-literature-for-a-paper-in-progress)

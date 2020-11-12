@@ -5,7 +5,7 @@ nav_order: 20
 ---
 
 # Quick Start
-The real power behind Inciteful is it's ability to craft a graph based on your specific topic.  There are a variety of ways in which to do that, which you can view on on the [use cases](use-cases) page but here we will just go through a simple search process which you can follow along with or do your own search in paralell.  
+The real power behind Inciteful is it's ability to craft a graph based on your specific topic.  There are a variety of ways in which to do that, which you can view on on the [use cases](use-cases) page but here we will just go through a simple search process which you can follow along with or do your own search in parallel.  
 
 ## 1) Start with a Paper
 The easiest way to get started is by having a paper that covers a topic in which you are interested.  You can either use the search box to type in the title or enter the [DOI](faq#what-is-a-doi) of the paper if you can't find it through the search.  For this example we will attempt to find the latest papers about methods of measuring segregation.  We will use the following as the source paper but you can use whatever you'd like:
@@ -22,7 +22,7 @@ At the top of the page we have information about the source paper such as the ti
 In this instance, it is a depth 2 graph, with 6,387 papers and 51,973 citations.  To better understand what this means in the context of Inciteful head over to [Graphs Explained](graphs-explained). 
 
 ### Important Papers
-We'll skip past the `Filters` section and head down to the tables.  The first table covers the `Most Important` papers, as measured by the [PageRank](graphs-explained#what-is-page-rank) algorithm.  PageRank goes beyond simple citation counts and it values papers which are cited by other important papers, so you don't need to have a lot of citations to be important, just be cited by imporant papers. 
+We'll skip past the `Filters` section and head down to the tables.  The first table covers the `Most Important` papers, as measured by the [PageRank](graphs-explained#what-is-page-rank) algorithm.  PageRank goes beyond simple citation counts and it values papers which are cited by other important papers, so you don't need to have a lot of citations to be important, just be cited by important papers. 
 
 ![Important Papers](assets/images/qs-important.png)
 
@@ -45,10 +45,10 @@ Coming back to the `Filter` section, you can use these fields to filter the pape
 
 As you can see from the above image in the `Important Papers` section the most important papers is titled `Dynamic models of segregation`, so lets use that as a lead and enter `segregation models` in our keyword filter.  This gives us the following in our `Important Papers` table:
 
-![Seg Models Important](assets/images/seg-models-important.png)
+![Segregation Models Important](assets/images/seg-models-important.png)
 
 And in the `Similar Papers` table:
-![Seg Models Important](assets/images/seg-models-similar.png)
+![Segregation Models Similar](assets/images/seg-models-similar.png)
 
 ## 3) Add Relevant Papers
 Now that we have a list of papers that are relevant to what we are looking for, we want to start making a new graph centered around these papers.  In order to do so, we want to click the <img src="assets/images/plus-sign.png" style="width: 15px"/> next to each title.  This will start collecting papers to add to the graph.  

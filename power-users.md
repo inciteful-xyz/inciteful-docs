@@ -39,7 +39,7 @@ The table containing all of the papers in the graph
 |      resource_allocation |    REAL | Similar to Adamic/Adar, the Resource Allocation score of the paper is a link prediction algorithms which, when used in this context, can help to detect similarity between papers. |
 |   conference_series_name |    TEXT |                                                                                                                       The name of the conference in which the paper was presented. |
 | conference_instance_name |    TEXT |                                                             The instance of the conference in which the paper was presented. This is more specific than the conference_series_name |
-|       conference_locaton |    TEXT |                                                                                                                      The location of the conference where the paper was presented. |
+|      conference_location |    TEXT |                                                                                                                      The location of the conference where the paper was presented. |
 |          conference_year |    TEXT |                                                                                                                          The year of the conference where the paper was presented. |
 
 ### `authors`
@@ -54,7 +54,7 @@ A denormalized table containing the metadata about each author for each paper.
 | affiliation |    TEXT | The affiliation of the author at the time the paper was written |
 
 ### `title_search('SEARCH_TERM')`
-A table containing a full text index of the paper titles that can be searched by replacing {SEARCH_TERM} with the query of your choice. You can use boolean operators like AND, OR, and NOT in addition to parentesis to create matching logic. An example finding the best match:
+A table containing a full text index of the paper titles that can be searched by replacing {SEARCH_TERM} with the query of your choice. You can use Boolean operators like AND, OR, and NOT in addition to parenthesis to create matching logic. An example finding the best match:
 
 ```
 SELECT * FROM title_search('refugee') ORDER BY bm25(title_search)

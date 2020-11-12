@@ -14,7 +14,7 @@ The site was built from the ground up to be flexible.  That means whether you ar
 
 * The [Use Cases](use-cases) section goes into different ways of using Inciteful.
 
-* The [How Does Inciteful Work?](how-does-it-work) page is for those who want to get into the nitty gritty.
+* The [How Does Inciteful Work?](how-does-it-work) page is for those who want to get into the details.
 
 * The [Power Users](power-users) section goes in depth on how to get exactly the info you want out of the graph using the SQL query interface.  
 

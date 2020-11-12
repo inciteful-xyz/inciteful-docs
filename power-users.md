@@ -4,12 +4,19 @@ title: Power Users
 nav_order: 60
 ---
 
+
+# Graph Filters
+
+## Graph Keyword Filters 
+
+## Distance Filters
+
 # SQL Query Panel
 
-# Database Schema
+## Database Schema
 The following is the schema for the database which you query.  Every graph has a corresponding unique database.  
 
-## `papers`
+### `papers`
 The table containing all of the papers in the graph
 
 |              Column Name |    Type |                                                                                                                                                                        Description |
@@ -35,7 +42,7 @@ The table containing all of the papers in the graph
 |       conference_locaton |    TEXT |                                                                                                                      The location of the conference where the paper was presented. |
 |          conference_year |    TEXT |                                                                                                                          The year of the conference where the paper was presented. |
 
-## `authors`
+### `authors`
 A denormalized table containing the metadata about each author for each paper.
 
 | Column Name |    Type |                                                     Description |
@@ -46,7 +53,7 @@ A denormalized table containing the metadata about each author for each paper.
 |    sequence | INTEGER |                        The sequence of the author in the paper. |
 | affiliation |    TEXT | The affiliation of the author at the time the paper was written |
 
-## `title_search('SEARCH_TERM')`
+### `title_search('SEARCH_TERM')`
 A table containing a full text index of the paper titles that can be searched by replacing {SEARCH_TERM} with the query of your choice. You can use boolean operators like AND, OR, and NOT in addition to parentesis to create matching logic. An example finding the best match:
 
 ```
@@ -59,7 +66,7 @@ SELECT * FROM title_search('refugee') ORDER BY bm25(title_search)
 |              title |    TEXT |                                                                                                                            The text which was searched. |
 | bm25(title_search) |    REAL | Returns a real value indicating how well the current row matches the full-text query. The better the match, the numerically smaller the value returned. |
 
-## `title_terms`
+### `title_terms`
 A table a list of all of the stemmed title terms present in the full text index and their counts.
 
 | Column Name | Type |                                          Description |

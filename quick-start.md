@@ -101,4 +101,4 @@ And where they are publishing:
 Now that we have found the papers in which we are most interested, we can easily download the results in a BibTex format by clicking the link that looks like this ![](assets/images/bibtex-button.png) at the bottom of the table.  From there you can import it into your reference management tool of choice like Zotero or Mendeley.  
 
 # Next Steps
-I hope you found this useful.  If you want more you can head over to the (Use Cases)[use-cases] section of the docs to see other ways to use Inciteful.  If you are wondering about how the site works, head over [here](how-does-it-work.md).
+I hope you found this useful.  If you want more you can head over to the [Use Cases](use-cases) section of the docs to see other ways to use Inciteful.  If you are wondering about how the site works, head over [here](how-does-it-work.md).

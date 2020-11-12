@@ -9,6 +9,12 @@ If you want to know how Inciteful works but you think that the graphs we use are
 
 Then start here.  It's a basic rundown of what a graph is and how they help us think about the way in which academic papers are connected.
 
+- [Graph Basics](#graph-basics)
+  - [Dots and Lines](#dots-and-lines)
+  - [Equality](#equality)
+  - [Directed vs Undirected](#directed-vs-undirected)
+  - [Cycles](#cycles)
+
 # Graph Basics
 
 ## Dots and Lines

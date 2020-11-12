@@ -6,6 +6,13 @@ nav_order: 50
 
 In order to understand how Inciteful works, you should have a base line level of knowledge about graphs.  If you don't read [Graphs Explained](graphs-explained.md) first and then come back here. 
 
+- [Academic Papers as Graphs](#academic-papers-as-graphs)
+  - [Directed Acyclic Graphs (DAGs)](#directed-acyclic-graphs-dags)
+- [Algorithms](#algorithms)
+  - [What is PageRank?](#what-is-pagerank)
+  - [Link Prediction Algorithms](#link-prediction-algorithms)
+
+
 # Academic Papers as Graphs
 
 ## Directed Acyclic Graphs (DAGs)

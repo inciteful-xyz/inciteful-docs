@@ -98,13 +98,13 @@ We've chosen to use the Adamic/Adar algorithm. This tries to compensate for the 
 
 Put into words a normal person can understand, for every paper that `a` and `b` mutually cite, the similarity score between the two is calculated as the sum of the inverse log of the number citations the mutually cited paper receives.  Ok, that was only slightly clearer, but let me try again but this time with a simple example.  Say we have a simple graph:
 
-![](_site/assets/images/three-friend-1.png)
+![](assets/images/three-friend-1.png)
 
 In this case the similarity score between papers `0` and `2` would be `1/log(2) = 3.322` because paper `1` has two nodes citing it (hence the `log(2)`).  If nodes `0` and `2` had a bunch of other mutual citations, then we would repeat the process for each mutual citation and the score would be the sum of those individual scores.  
 
 One last example, in this case we have another simple graph except this time paper `1` has 100 citations.  
 
-![](_site/assets/images/three-friend-100.png)
+![](assets/images/three-friend-100.png)
 
 So the similarity score between papers `0` and `2` would be `1/log(100) = 0.1`, clearly lower than the previous example. 
 

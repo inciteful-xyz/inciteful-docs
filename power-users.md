@@ -6,7 +6,9 @@ nav_order: 60
 If you really want to get to know all the functionality of Inciteful, you've found the right place.
 
 - [Graph Filters](#graph-filters)
-  - [Graph Keyword Filters](#graph-keyword-filters)
+  - [Keyword Filters](#keyword-filters)
+    - [Boolean Queries](#boolean-queries)
+    - [Porter Stemming](#porter-stemming)
   - [Distance Filters](#distance-filters)
 - [BibTeX](#bibtex)
   - [Importing into Inciteful](#importing-into-inciteful)
@@ -21,11 +23,56 @@ If you really want to get to know all the functionality of Inciteful, you've fou
     - [`title_terms`](#title_terms)
 
 # Graph Filters
+On every graph dashboard there are a set of filters which allow you to filter the contents of the tables below.  This allows you to really dig into the graph and find the type of papers you are looking for.  The three types of filters are keywords, distance, and year.  
 
-## Graph Keyword Filters 
+The year filter is pretty straight forward it filters on the year the paper was published. The other two need a bit more explaining.  
+
+## Keyword Filters 
+The keyword filters do just that, they filter on keywords present in the **title**.  Unfortunately we do not have access to abstracts at this point and so title filtering is the best we can do.  
+
+We tried to make the search flexible.
+
+### Boolean Queries
+The keyword filter does do Boolean queries.  So you can use the `AND`, `OR`, and `NOT` in your queries.  The following are all valid queries:
+
+```
+hello AND world
+foo OR bar
+(goodbye AND world) NOT cruel
+```
+
+You can join them together to your heart's content.
+
+### Porter Stemming
+Also, the keywords you put in are subject to the [Porter Stemming Algorithm](http://people.scs.carleton.ca/~armyunis/projects/KAPI/porter.pdf) so that it will do partial matches on words.  For example, the following words would all match each other with the same stem of `connect`:
+
+```
+connect
+connected
+connecting
+connection
+connections
+```
 
 ## Distance Filters
+In order to really understand the distance filters you first need to understand [how the graphs are constructed](how-does-it-work#building-local-graphs).  But I will do a quick rundown here. 
 
+For graphs that are centered on a single `seed paper`: 
+
+* the `seed paper` has a distance of `0`
+* papers which either cite the `seed paper` or are cited by the `seed paper` have a distance of `1`
+* papers which either cite or are cited by the papers with a distance of `1`, have a distance of `2` 
+
+In visual form:
+
+![](assets/images/depth-2-graph.png)
+
+For papers which are centered around multiple `seed papers`:
+* the "fake paper" we create has a distance of `0`
+* the `seed papers` have a distance of `1`
+* papers which either cite or are cited by the `seed papers` have a distance of `2` 
+
+For a better understanding, head over to the [how does Inciteful work](how-does-it-work) page.
 
 # BibTeX
 Inciteful supports both [BibTeX](faq#what-is-a-bibtex-file) importing as well as exporting. The import functionality is used to seed a graph and the export functionality is used to save papers that are of interest to you. 
@@ -71,7 +118,7 @@ The table containing all of the papers in the graph
 |               book_title |    TEXT |                                                                                                                            The title of the book in which the paper was published. |
 |               num_citing | INTEGER |                                                                                                                                      The number of papers which this papers cites. |
 |             num_cited_by | INTEGER |                                                                                                                                        The number of papers which cite this paper. |
-|                 distance | INTEGER |                                                                                                   The degrees away (as an undirected graph) this paper lies from the `seed paper`. |
+|                 distance | INTEGER |                                                                                                  The distance away (as an undirected graph) this paper lies from the `seed paper`. |
 |                page_rank |    REAL |                                                                                                                                                        The PageRank of this paper. |
 |              adamic_adar |    REAL |                    The Adamic/Adar score of the paper. Adamic/Adar is a link prediction algorithms which, when used in this context, can help to detect similarity between papers. |
 |      resource_allocation |    REAL | Similar to Adamic/Adar, the Resource Allocation score of the paper is a link prediction algorithms which, when used in this context, can help to detect similarity between papers. |

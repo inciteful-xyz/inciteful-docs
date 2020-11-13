@@ -108,7 +108,7 @@ One last example, in this case we have another simple graph except this time pap
 
 So the similarity score between papers `0` and `2` would be `1/log(100) = 0.1`, clearly lower than the previous example. 
 
-We've chosen the Adamic/Adar algorithm because it doesn't overly penalize a mutual paper for being popular but it still rewards papers which mutually cite less cited papers.  And that tend to be more indicative of sharing a niche. 
+We've chosen the Adamic/Adar algorithm because it doesn't overly penalize a mutual paper for being popular but it still rewards papers which mutually cite less cited papers.  That tends to be more indicative of sharing a niche. 
 
 # Graph Cache & SQL
 The last step in the process is caching the output of the previous steps in order to avoid repeating the work.  The output is cached for a period of time (24+ hours) so that when you return to the page, it should feel a lot faster than when it was first loaded.  This intermediate format has a SQL interface over the top of it and all results you see rendered on the page are extracted through that interface.  As a result, on the bottom of any table you wish to dig into, you can click the ![](assets/images/sql-button.png) button to see the underlying query and modify it to your needs. 

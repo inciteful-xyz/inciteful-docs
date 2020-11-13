@@ -20,12 +20,12 @@ The real power behind Inciteful is it's ability to craft a graph based on your s
 - [Next Steps](#next-steps)
 
 # 1) Start with a Paper
-The easiest way to get started is by having a paper that covers a topic in which you are interested.  You can either use the search box to type in the title or enter the [DOI](faq#what-is-a-doi) of the paper if you can't find it through the search.  For this example we will attempt to find the latest papers about methods of measuring segregation.  We will use the following as the source paper but you can use whatever you'd like:
+The easiest way to get started is by having a paper that covers a topic in which you are interested.  You can either use the search box to type in the title or enter the [DOI](faq#what-is-a-doi) of the paper if you can't find it through the search.  For this example we will attempt to find the latest papers about methods of measuring segregation.  We will use the following as the `seed paper` but you can use whatever you'd like:
 
 [“Planning Dissonance” and the Bases for Stably Diverse Neighborhoods: The Case of South Seattle](https://inciteful.xyz/p/10.1111/cico.12224){:target="_blank"}
 
 # 2) Explore the Results
-At the top of the page we have information about the source paper such as the title, authors, journal it was published in, etc.  If they are available we also include links to the open access version of the article as well as the abstract.  In addition to those we have basic stats about how many papers are citing this paper, how many papers the source paper cites, an open access link if applicable, as well as some information about the graph.  
+At the top of the page we have information about the `seed paper` such as the title, authors, journal it was published in, etc.  If they are available we also include links to the open access version of the article as well as the abstract.  In addition to those we have basic stats about how many papers are citing this paper, how many papers the `seed paper` cites, an open access link if applicable, as well as some information about the graph.  
 
 <div style="text-align:center">
     <img src="assets/images/qs-graph-stats.png" />
@@ -43,11 +43,11 @@ Given the nature of academic literature and how it takes time to build up citati
 You can also click on any of the paper titles to get more information about them, similar to what is presented at the top of the current page. 
 
 ## Similar Papers
-This section uses a [link prediction algorithm](graphs-explained#link-prediction-algorithms) to show you the most similar papers based on who these papers cite.  If the source paper cites many of the same papers that another paper does, then they are considered similar. 
+This section uses a [link prediction algorithm](graphs-explained#link-prediction-algorithms) to show you the most similar papers based on who these papers cite.  If the `seed paper` cites many of the same papers that another paper does, then they are considered similar. 
 
 ![Similar Papers](assets/images/qs-similar.png)
 
-The effect of similar papers is the inverse of important papers.  Since papers which are published after the source paper have a better chance of citing the same papers, these papers tend to be more recent papers in the field.
+The effect of similar papers is the inverse of important papers.  Since papers which are published after the `seed paper` have a better chance of citing the same papers, these papers tend to be more recent papers in the field.
 
 ## Other Data
 Under the `Similar Papers` section we have the `Other Data` section.  This section is used to highlight other interesting information about the graph.  Such as most important authors, institutions, and journals.  It helps to get an idea of where the work in this space is being done, by whom, and in what journals. 

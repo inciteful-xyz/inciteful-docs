@@ -42,4 +42,4 @@ But because of the way in which the "publication cycle" (hardy har) works in aca
 There is a very creative name for this type of graph.  It's called a "Directed Acyclic Graph" or (DAG)
 
 # Next Steps
-Now that you are an expert in graphs, head over to the [How Inciteful Works](how-does-it-work.md) page.  
+Now that you are an expert in graphs, head over to the [How Inciteful Works](how-does-it-work) page.  

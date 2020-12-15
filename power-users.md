@@ -5,6 +5,7 @@ nav_order: 60
 ---
 If you really want to get to know all the functionality of Inciteful, you've found the right place.
 
+- [Beta Features](#beta-features)
 - [Graph Filters](#graph-filters)
   - [Keyword Filters](#keyword-filters)
     - [Boolean Queries](#boolean-queries)
@@ -22,6 +23,8 @@ If you really want to get to know all the functionality of Inciteful, you've fou
     - [`title_search('SEARCH_TERM')`](#title_searchsearch_term)
     - [`title_terms`](#title_terms)
 
+# Beta Features
+Community feedback is invaluable.  That's why you can opt into features we are testing from our <a href="https://inciteful.xyz/beta">Beta Features</a> page.  Go boldly forth if you are the adventurous type. 
 # Graph Filters
 On every graph dashboard there are a set of filters which allow you to filter the contents of the tables below.  This allows you to really dig into the graph and find the type of papers you are looking for.  The three types of filters are keywords, distance, and year.  
 

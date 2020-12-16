@@ -1,0 +1,27 @@
+name: Inciteful-Docs-CI
+
+on:
+  push:
+    branches: [ master ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-16.04
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+    - name: Setup Cache
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - name: Build Jekyll
+      uses:  lemonarc/jekyll-action@1.0.0
+    - name: Upload Artifacts to GCloud
+      run: |
+        gsutil rsync -d -r ./_site/ gs://inciteful-docs/

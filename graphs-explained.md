@@ -23,7 +23,7 @@ In this graph there are three nodes and two edges:
 * nodes - `0`, `1`, and `2`
 * edges - `{0,1}` and `{1,2}`
 
-You might notice that something doesn't feel quite right with this graph in the context of academic papers... 
+You might notice that something doesn't feel quite right with this graph in the context of academic papers...
 
 # Directed Graphs
 That's because there are different types of graphs.  One way of differentiating between types of graphs is when the edges have some sort of direction implied by their nature. 

@@ -4,7 +4,7 @@ title: How Does Inciteful Work?
 nav_order: 50
 ---
 
-In order to understand how Inciteful works, you should have a base line level of knowledge about graphs.  If you don't, read [Graphs Explained](graphs-explained.md) first and then come back here. 
+In order to understand how Inciteful works, you should have a base line level of knowledge about graphs.  If you don't, read [Graphs Explained](graphs-explained) first and then come back here. 
 
 - [Academic Papers as Graphs](#academic-papers-as-graphs)
   - [As a Directed Acyclic Graph](#as-a-directed-acyclic-graph)
@@ -73,7 +73,7 @@ But at it's core PageRank doesn't just count the number of citations you get, it
 
 Anyways, the power of PageRank is that it also surfaces papers which may not have a ton of citations but that are cited by papers which do.  In real world terms this means that it tends to show not just the most recent influential papers in a topic, but also the papers that influenced those papers.  Giving you better incite (pun intended) into the history of a topic than if you just looked at the top cited papers. 
 
-If you choose, you can always sort by the most citations using our [SQL query panel](power-users.md#sql-query-panel) but we find that PageRank does a great job highlighting the best papers. 
+If you choose, you can always sort by the most citations using our [SQL query panel](power-users#sql-query-panel) but we find that PageRank does a great job highlighting the best papers. 
 
 ## Similarity
 The next major problem we try to tackle is similarity.  The class of algorithms we chose to use here are often called "Link Prediction" algorithms as well.  They are often used in social networks for "friend recommendation".  

@@ -16,6 +16,7 @@ In order to understand how Inciteful works, you should have a base line level of
     - [PageRank](#pagerank)
   - [Similarity](#similarity)
     - [Adamic/Adar](#adamicadar)
+    - [Salton Index](#salton-index)
 - [Graph Cache & SQL](#graph-cache--sql)
 - [The Underlying Data](#the-underlying-data)
 
@@ -76,14 +77,16 @@ Anyways, the power of PageRank is that it also surfaces papers which may not hav
 If you choose, you can always sort by the most citations using our [SQL query panel](power-users#sql-query-panel) but we find that PageRank does a great job highlighting the best papers. 
 
 ## Similarity
-The next major problem we try to tackle is similarity.  The class of algorithms we chose to use here are often called "Link Prediction" algorithms as well.  They are often used in social networks for "friend recommendation".  
+The next major problem we try to tackle is similarity.  The class of algorithms we chose to use here are often called "Link Prediction" algorithms as well.  They are often used in social networks for "friend recommendations".  
 
-The general thinking goes like this.  If you are friends with a lot of my friends maybe we should be friends.  For papers, if paper `a` cites a lot of the papers which paper `b` cites, maybe they should cite each other.  
+The general thinking goes like this.  If you are friends with a lot of my friends maybe we should be friends.  For papers, if paper `a` cites a lot of the papers which paper `b` cites, maybe they should be friends ([bibliographic coupleing](https://en.wikipedia.org/wiki/Bibliographic_coupling)).  Or if paper `a` is cited by a lot by papers which also cite paper `b`, then maybe they should be friends ([co-citation](https://en.wikipedia.org/wiki/Co-citation)).
 
 There are a few complications:  
 
-* What if paper `a` cites 500 papers and paper `b` cites 3, should they really be friends?
-* What if the papers that they each cite are all cited by 10,000 people?  Is that really a "close" connection?
+1) What if paper `a` cites 500 papers and paper `b` cites 3, should they really be friends?
+2) What if the papers that they each cite are all cited by 10,000 people?  Is that really a "close" connection?
+3) What if paper `b` has only one citation, should it really be friends with all the other papers that the citing paper references? 
+4) What is paper `a` and `b` both have 1000's of citations and share 20?  Should those be better friends that two papers which have 10 citations but share 5? 
 
 Most similarity algorithms try to compensate for one of these two problems. 
 
@@ -92,7 +95,7 @@ For the close reader you might be thinking, for the Inciteful graphs, what exact
 Like the importance scores, similarity scores have an interesting real-world implication.  Since citations to papers are built over time, papers published after the `seed paper` have a better chance at citing the same papers.  So similarity metrics tend to bias towards more recent publications that are building on the important papers.  As you add papers to your custom graph from the "Similarity Table", you increasingly bias the next graph's similarity scores to more and more recent papers.  As a result you end up quickly zeroing on the the latest research in your topic.
 
 ### Adamic/Adar
-We've chosen to use the Adamic/Adar algorithm. This tries to compensate for the problem where the mutual friend has a ton of friends.  The equation is as follows:
+We've chosen to use the Adamic/Adar algorithm for our bibliographic coupling metric. This tries to compensate for the problem 2, where the mutual friend has a ton of friends.  The equation is as follows:
 
 ![](assets/images/adamic-adar-eq.png)
 
@@ -109,6 +112,13 @@ One last example, in this case we have another simple graph except this time pap
 So the similarity score between papers `0` and `2` would be `1/log(100) = 0.1`, clearly lower than the previous example. 
 
 We've chosen the Adamic/Adar algorithm because it doesn't overly penalize a mutual paper for being popular but it still rewards papers which mutually cite less cited papers.  That tends to be more indicative of sharing a niche. 
+
+### Salton Index
+For the co-citation metric we are using the [Salton Index](https://cran.r-project.org/web/packages/linkprediction/vignettes/proxfun.html#salton-index-cosine-similarity).  This algorithm tries to compensate for problems 3 and 4.  The equation is as follows:
+
+![](assets/images/salton-eq.png)
+
+Where `Γ(u)` means the papers citing `u` and `Γ(v)` means the papers citing `v`.  The square root of the product of the two citation counts in the denominator helps to even out the problem that arises when there is a disparity between the number of citations each paper has received. This in turns helps to address problems 3 and 4 from above. 
 
 # Graph Cache & SQL
 The last step in the process is caching the output of the previous steps in order to avoid repeating the work.  The output is cached for a period of time (24+ hours) so that when you return to the page, it should feel a lot faster than when it was first loaded.  This intermediate format has a SQL interface over the top of it and all results you see rendered on the page are extracted through that interface.  As a result, on the bottom of any table you wish to dig into, you can click the ![](assets/images/sql-button.png) button to see the underlying query and modify it to your needs. 

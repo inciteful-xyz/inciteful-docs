@@ -58,7 +58,7 @@ connections
 ```
 
 ## Distance Filters
-In order to really understand the distance filters you first need to understand [how the graphs are constructed](how-does-it-work#building-local-graphs).  But I will do a quick rundown here. 
+In order to really understand the distance filters you first need to understand [how the paper discovery tools works](paper-disovery-explained#building-local-graphs).  But I will do a quick rundown here. 
 
 For graphs that are centered on a single `seed paper`: 
 
@@ -75,7 +75,7 @@ For papers which are centered around multiple `seed papers`:
 * the `seed papers` have a distance of `1`
 * papers which either cite or are cited by the `seed papers` have a distance of `2` 
 
-For a better understanding, head over to the [how does Inciteful work](how-does-it-work) page.
+For a better understanding, head over to the [Paper Discovery Explained](paper-disovery-explained) page.
 
 # BibTeX
 Inciteful supports both [BibTeX](faq#what-is-a-bibtex-file) importing as well as exporting. The import functionality is used to seed a graph and the export functionality is used to save papers that are of interest to you. 

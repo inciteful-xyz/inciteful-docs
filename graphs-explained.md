@@ -37,9 +37,9 @@ The fact that papers cannot cite each other has deeper implications for how we t
 
 ![](assets/images/cycle.png)
 
-But because of the way in which the "publication cycle" (hardy har) works in academia, you should never have a cycle in the graph of academic literature.  
+But because of the way in which the "publication cycle" (pun intended) works in academia, you should never have a cycle in the graph of academic literature.  
 
 There is a very creative name for this type of graph.  It's called a "Directed Acyclic Graph" or (DAG)
 
 # Next Steps
-Now that you are an expert in graphs, head over to the [How Inciteful Works](how-does-it-work) page.  
+Now that you are an expert in graphs, head over to the [Paper Discovery Explained](paper-disovery-explained) page.  

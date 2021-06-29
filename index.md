@@ -5,10 +5,10 @@ nav_order: 1
 ---
 
 # What is Inciteful?
-Inciteful is a new take on the process of searching through academic literature and, as such, can be a bit confusing at first.  The hope is that after a few minutes with these pages you'll quickly get the hang of it. 
+Inciteful is a new take on the process of searching through academic literature and, as such, can be a bit confusing at first.  The hope is that after a few minutes with these pages you'll quickly build an intuition for how best to navigate the site. 
 
 ## Our Tools
-Right now Inciteful consists of two different tools with more under active development.  
+Right now Inciteful consists of two different tools, with more under active development.  
 
 The first tool was our Paper Discovery tool.  It builds a network of papers from citations, uses network analysis algorithms to analyze the network, and gives you the information you need to quickly get up to speed on that topic. You can find the most similar papers, important papers as well as prolific authors and institutions.
 

@@ -150,7 +150,7 @@ A table a list of all of the stemmed title terms present in the full text index 
 # Literature Connector
 
 ## Context (right-click) Options
-The ability to right click on nodes in the graph is something that is not obvious but helps with exploring different graphs.  The right click menu quickly allows you to set a new "from" or "to" paper, add a paper to a new "paper discovery search", lock a the graph's paths to a particular paper, or jump directly to the "Paper Discovery" view of that single paper. 
+The ability to right click on paper nodes in the graph is something that is not obvious but helps with exploring the graphs.  The right click menu quickly allows you to set a new "from" or "to" paper, add a paper to a new "paper discovery search", lock a the graph's paths to a particular paper, or jump directly to the "Paper Discovery" view of that single paper. 
 
 ![](assets/images/lc-right-click.png)
 ## Graph Filters
